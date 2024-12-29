@@ -14,7 +14,7 @@
 <ul>
     <% menuItems.forEach((e)=>{
         %>
-        <h3><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h3>
+        <h3><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%><%=(e.rating==5 ? "⭐" :"")%></h3>
    <% }) %>    
 </ul>
    

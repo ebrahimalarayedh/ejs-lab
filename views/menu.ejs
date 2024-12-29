@@ -23,7 +23,8 @@
         <ul>
             <% mains.forEach((e)=>{
                 %>
-                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h5>
+                
+                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%><%=(e.rating==5 ? "⭐" :"")%></h5>
            <% }) %>    
         </ul>
 
@@ -31,7 +32,7 @@
         <ul>
             <% sides.forEach((e)=>{
                 %>
-                <h5><%=e.name%>: a <%=e.rating%> stars side dish for <%=e.price%>$ and it is <%=e.details%></h5>
+                <h5><%=e.name%>: a <%=e.rating%> stars side dish for <%=e.price%>$ and it is <%=e.details%> <%=(e.rating==5 ? "⭐" :"")%></h5>
            <% }) %>    
         </ul>
 
@@ -39,7 +40,7 @@
         <ul>
             <% desserts.forEach((e)=>{
                 %>
-                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h5>
+                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%> <%=(e.rating==5 ? "⭐" :"")%></h5>
            <% }) %>    
         </ul>
 
