@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+
+<body>
+    <h1>Full Menu</h1>
+    <% const mains=menu.filter((e)=>{
+        return e.category== "mains"})
+
+        const desserts= menu.filter((e)=>{
+        return e.category== "desserts"})
+
+        const sides= menu.filter((e)=>{
+        return e.category== "sides"})
+        %>
+        <h3>mains:</h3>
+        <ul>
+            <% mains.forEach((e)=>{
+                %>
+                <h2><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h2>
+           <% }) %>    
+        </ul>
+
+        <h3>sides:</h3>
+        <ul>
+            <% sides.forEach((e)=>{
+                %>
+                <h2><%=e.name%>: a <%=e.rating%> stars side dish for <%=e.price%>$ and it is <%=e.details%></h2>
+           <% }) %>    
+        </ul>
+
+        <h3>desserts:</h3>
+        <ul>
+            <% desserts.forEach((e)=>{
+                %>
+                <h2><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h2>
+           <% }) %>    
+        </ul>
+
+
+
+
+</body>
+
+</html>
