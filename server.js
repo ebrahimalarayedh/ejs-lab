@@ -72,6 +72,7 @@ app.get('/menu/:category', (req, res) => {
   })
 
   res.render('category.ejs',{
+    name: category,
     menuItems:filterdMenu
   });
 });

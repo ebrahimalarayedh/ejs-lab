@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu: Category</title>
+    <title>Menu: <%=name%>: ></title>
 </head>
 
 <body>
     <%- include('./partials/nav') %>
 <%console.log(menuItems)%>
+<h1><%=name%>:</h1>
+<ul>
+    <% menuItems.forEach((e)=>{
+        %>
+        <h3><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h3>
+   <% }) %>    
+</ul>
    
 
 
