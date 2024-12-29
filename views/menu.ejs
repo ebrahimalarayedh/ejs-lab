@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <%- include('./partials/nav') %>
     <h1>Full Menu</h1>
     <% const mains=menu.filter((e)=>{
         return e.category== "mains"})
@@ -18,27 +19,27 @@
         const sides= menu.filter((e)=>{
         return e.category== "sides"})
         %>
-        <h3>mains:</h3>
+        <h2>mains:</h2>
         <ul>
             <% mains.forEach((e)=>{
                 %>
-                <h2><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h2>
+                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h5>
            <% }) %>    
         </ul>
 
-        <h3>sides:</h3>
+        <h2>sides:</h2>
         <ul>
             <% sides.forEach((e)=>{
                 %>
-                <h2><%=e.name%>: a <%=e.rating%> stars side dish for <%=e.price%>$ and it is <%=e.details%></h2>
+                <h5><%=e.name%>: a <%=e.rating%> stars side dish for <%=e.price%>$ and it is <%=e.details%></h5>
            <% }) %>    
         </ul>
 
-        <h3>desserts:</h3>
+        <h2>desserts:</h2>
         <ul>
             <% desserts.forEach((e)=>{
                 %>
-                <h2><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h2>
+                <h5><%=e.name%>: a <%=e.rating%> stars main course for <%=e.price%>$ and it is <%=e.details%></h5>
            <% }) %>    
         </ul>
 

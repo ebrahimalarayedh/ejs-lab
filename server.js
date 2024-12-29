@@ -65,4 +65,15 @@ app.get('/menu', (req, res) => {
   });
 });
 
+app.get('/menu/:category', (req, res) => {
+  const category= req.params.category
+  const filterdMenu = RESTAURANT.menu.filter((e)=>{
+    return category.toLowerCase()==e.category
+  })
+
+  res.render('category.ejs',{
+    menuItems:filterdMenu
+  });
+});
+
 app.listen(3000);
